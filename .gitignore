@@ -1,6 +1,11 @@
-**/eval
-**/fig
-**/log
-**/output_log
-**/test
-**/data-simplification
+transformer/eval/
+transformer_conf_loss/eval/
+transformer/fig/
+transformer_conf_loss/fig/
+transformer/log/
+transformer_conf_loss/log/
+transformer/output_log/
+transformer_conf_loss/output_log/
+transformer/test/
+transformer_conf_loss/test/
+data-simplification/
