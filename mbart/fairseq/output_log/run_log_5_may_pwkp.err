@@ -1,0 +1,5 @@
+/opt/conda/conda-bld/pytorch_1587428270644/work/torch/csrc/utils/python_arg_parser.cpp:756: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha)
+slurmstepd: error: *** JOB 6508646 ON node029 CANCELLED AT 2020-05-05T20:31:04 ***

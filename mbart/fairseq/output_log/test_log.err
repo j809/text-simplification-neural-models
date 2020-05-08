@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "generate.py", line 11, in <module>
+    cli_main()
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq_cli/generate.py", line 263, in cli_main
+    main(args)
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq_cli/generate.py", line 36, in main
+    return _main(args, sys.stdout)
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq_cli/generate.py", line 72, in _main
+    task=task,
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq/checkpoint_utils.py", line 190, in load_model_ensemble
+    filenames, arg_overrides, task, strict, suffix,
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq/checkpoint_utils.py", line 211, in load_model_ensemble_and_task
+    model.load_state_dict(state["model"], strict=strict, args=args)
+  File "/mnt/nfs/work1/cs696e/krajbhara/project/mbart/fairseq/fairseq/models/fairseq_model.py", line 93, in load_state_dict
+    return super().load_state_dict(new_state_dict, strict)
+  File "/home/krajbhara/miniconda3/envs/mbart/lib/python3.6/site-packages/torch/nn/modules/module.py", line 847, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for BARTModel:
+	Unexpected key(s) in state_dict: "encoder.layernorm_embedding.weight", "encoder.layernorm_embedding.bias", "decoder.layernorm_embedding.weight", "decoder.layernorm_embedding.bias". 
+	size mismatch for encoder.embed_tokens.weight: copying a param with shape torch.Size([250027, 1024]) from checkpoint, the shape in current model is torch.Size([250004, 1024]).
+	size mismatch for decoder.embed_tokens.weight: copying a param with shape torch.Size([250027, 1024]) from checkpoint, the shape in current model is torch.Size([250004, 1024]).
+	size mismatch for decoder.output_projection.weight: copying a param with shape torch.Size([250027, 1024]) from checkpoint, the shape in current model is torch.Size([250004, 1024]).
